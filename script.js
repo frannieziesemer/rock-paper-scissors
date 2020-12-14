@@ -4,28 +4,21 @@
 // generate a random number to choose from the array 
 
 
+function computerPlay() {
+    let item = ['rock', 'paper', 'scissors'];
+    let selection = Math.floor(Math.random() * item.length);
+    // console.log(`computer: ${item[selection]}`);
+    return item[selection];
+}
 
-// user will input a selection which will be played against the computer 
-// function will take two inputs - comptuerSelection + playerSelection 
-// covert input to lower case
-// if comptuer selection matches player selection print - "tie!"
-// if computer selection is 'paper' && player selection is 'rock' - print "You lose! Paper beats rock"
-// if computer is 'paper
-//must be case sensitive 
 
-//console.log(playRound(computerSelection, playerSelection));
+function playerPrompt() {
+    return prompt('rock, paper or scissors?').toLowerCase();
+}
 
 
 // game() function to play a 5 round game that keeps score 
-// if computer wins 3 or mor times 'you lose'
-// if player wins 3 or more time 'you win'
-// if it is a tie 3 or more times ' tie! '
-
-
-//while the game number is less that 6 reapeat the function call play round 
-
-
-function game() {
+function playGame() {
     
     let playerScore = 0;
     let computerScore = 0;
@@ -33,7 +26,8 @@ function game() {
     let totalGames = 0;
     let i;
     
-    for(i = 0; i < 5; i++) {
+    
+    for(i = 0; i < 5; i++) { //while the game number is less than 5 reapeat the function call play round + prompt again and run computer selectoin again
         console.log(`total games: ${totalGames}`);
 
         let playerSelection = playerPrompt();
@@ -48,21 +42,9 @@ function game() {
         console.log(`computer: ${computerScore}`);
     }
 
-    function computerPlay() {
-        let item = ['rock', 'paper', 'scissors'];
-        let selection = Math.floor(Math.random() * item.length);
-        // console.log(`computer: ${item[selection]}`);
-        return item[selection];
-    }
-    
-
-    function playerPrompt() {
-        return prompt('rock, paper or scissors?').toLowerCase();
-    }
     
 
     function playRound(computer, player) {
-        
         if(computer === player) {
             i--;
             console.log( 'Tie! - rematch');
@@ -95,4 +77,4 @@ function game() {
     }
 }
 
-console.log(game());
+console.log(playGame());
