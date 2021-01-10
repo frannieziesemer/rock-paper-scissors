@@ -31,19 +31,20 @@ function playRound(computer, player) {
         (player === 'paper' && computer === 'scissors') || 
         (player === 'scissors' && computer === 'rock')) {
             ++computerScore;
+            gameStatus.textContent = 'Computer wins';
            
     } else if ((player === 'rock' && computer === 'scissors') || 
         (player === 'scissors' && computer === 'paper') || 
         (player === 'paper' && computer === 'rock')) {
             ++playerScore;
-            
+            gameStatus.textContent = 'you win!';
     } else {
         console.log('error');
     }
     ++totalGames;
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
-    gameCount.textContent = totalGames + 1;
+    gameCount.textContent = totalGames;
     keepScore(computerScore, playerScore, totalGames);
 }
 
@@ -65,7 +66,7 @@ function keepScore(computerScore, playerScore, totalGames) {
             console.log('from five games Tie!');
         }   
     } else { 
-        gameStatus.textContent = 'next round!';
+        // gameStatus.textContent = 'next round!';
         resultsDisplay.textContent = ' ';
     };
     
