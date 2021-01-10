@@ -1,0 +1,17 @@
+.container {
+    margin: 150px auto;
+    padding: 0px 200px 0px 200px;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 50px;
+}
+
+.scores {
+    margin: 100px 50px;
+}
+
+.gamesPlayed {
+    text-align: left;
+}
