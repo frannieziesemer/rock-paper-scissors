@@ -5,9 +5,9 @@
 }
 
 h1 {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
-h4 {
+h4, h5 {
     padding-bottom: 40px;
 }
 .scores {

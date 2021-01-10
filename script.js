@@ -26,7 +26,7 @@ function computerPlay() {
 
 function playRound(computer, player) {
     if(computer === player) {
-        
+        gameStatus.textContent = 'Tie';
     } else if ((player === 'rock' && computer === 'paper') || 
         (player === 'paper' && computer === 'scissors') || 
         (player === 'scissors' && computer === 'rock')) {
