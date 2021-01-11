@@ -7,3 +7,8 @@ Skills learned and practiced:
     - code refactoring
     - bootstrap
   
+  
+  
+To Do 
+- add pictures
+- improve ui
