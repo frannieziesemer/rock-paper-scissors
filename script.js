@@ -15,12 +15,13 @@ const playerScoreDisplay = document.querySelector('.playerScore');
 const resultsDisplay = document.querySelector('.results');
 const gameCount = document.querySelector('.gameCount');
 const gameStatus = document.querySelector('.gameStatus');
+const computerSelection = document.querySelector('.computerSelection');
 
 
 function computerPlay() {
     let item = ['rock', 'paper', 'scissors'];
     let selection = Math.floor(Math.random() * item.length);
-    // console.log(`computer: ${item[selection]}`);
+    computerSelection.textContent = item[selection];
     return item[selection];
 }
 
@@ -32,12 +33,11 @@ function playRound(computer, player) {
         (player === 'scissors' && computer === 'rock')) {
             ++computerScore;
             gameStatus.textContent = 'Computer wins';
-           
     } else if ((player === 'rock' && computer === 'scissors') || 
         (player === 'scissors' && computer === 'paper') || 
         (player === 'paper' && computer === 'rock')) {
             ++playerScore;
-            gameStatus.textContent = 'you win!';
+            gameStatus.textContent = 'You win!';
     } else {
         console.log('error');
     }
@@ -48,25 +48,18 @@ function playRound(computer, player) {
     keepScore(computerScore, playerScore, totalGames);
 }
 
-// function displayScores(){
-//     computerScoreDisplay.textContent = computerScore;
-// }
 
 function keepScore(computerScore, playerScore, totalGames) {
     if(totalGames === 5) {
         resetScores();
         if (computerScore > playerScore) {
             resultsDisplay.textContent = 'Computer Wins';
-            console.log('From five games Computer Wins');
         }   else if (computerScore < playerScore) {
             resultsDisplay.textContent = 'You win!';
-            console.log('From five games You win!');
         }   else if (computerScore === playerScore) {
             resultsDisplay.textContent = 'Tie!';
-            console.log('from five games Tie!');
         }   
     } else { 
-        // gameStatus.textContent = 'next round!';
         resultsDisplay.textContent = ' ';
     };
     
