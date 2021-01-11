@@ -1,9 +1,9 @@
 # rock-paper-scissors
 
-What did I learn? 
-
-Vanilla Javascript
-    - for loops
+Skills learned and practiced:
+    -  for loops
     - if statements
     - event listeners
     - code refactoring
+    - bootstrap
+  
