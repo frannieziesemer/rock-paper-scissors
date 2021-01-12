@@ -1,6 +1,7 @@
 # rock-paper-scissors
 
-Skills practiced
+# Skills demonstrated
+Vanilla JavaScript
 - for loops
 - if statments
 - event listeners 
