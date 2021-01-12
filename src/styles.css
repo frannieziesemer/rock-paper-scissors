@@ -15,23 +15,40 @@ h1, h2, h4, h5 {
     vertical-align: middle;
 }
 
-.rockField, .paperField, .scissorsField {
+button {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid black;
+    box-shadow: 6px 6px 2px 1px rgb(90, 90, 90);
+    color: transparent;
+}
+
+button:hover {
+    box-shadow: 2px 2px 2px 1px rgb(90, 90, 90);
+    transform: translate(4px, 4px);
+
+}
+
+.rock {
+    background-image: url("images/rock.png");   
+
+}
+.paper {
+    background-image: url("images/paper.png");   
+
+}
+.scissors {
+    background-image: url("images/scissors.png");   
+
+}
+
+.buttonField {
     width: 30%;
     height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.rockField {
-    background-image: url("images/rock.png");   
-}
-
-.paperField {
-    margin: 0px 10px 0px 10px;
-    background-image: url("images/paper.png");
-}
-.scissorsField {
-    background-image: url("images/scissors.png");   
+    margin: 0px 5px 0px 5px;
 }
 
 .computerSelection {
