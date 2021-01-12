@@ -10,7 +10,6 @@ Vanilla JavaScript
 
   
 To Do 
-- add pictures
-- improve ui
+- add picture to 'computer chose' section
 
 
