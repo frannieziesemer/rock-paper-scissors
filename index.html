@@ -7,10 +7,10 @@
     <!-- Bootstrap CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="styles.css" rel="stylesheet">
+    <link href="src/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container shadow p-4 mb-5 rounded-3">
+    <div class="container shadow p-4 mb-5 ">
         <div class="row">
             <div class="col-12">
                 <h1>Scissors Paper Rock</h1>
@@ -19,23 +19,28 @@
                 <h4>Best of five rounds</h4> 
             </div>
         </div>
-        <div class="row buttonContainer">
-            <div class="col-6">
-                <div class="row p-2 mx-1 rounded-3 playerBox">
-                    <p>You</p>
-                    <p>Choose your weapon:</p>
-                    <div class="col-4"><button type="button" class="btn btn-light rock">rock</button></div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-primary paper">paper</button>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-success scissors">scissors</button>
-                </div>
-                <p class="pt-4">Score: <span class="playerScore"></span></p>
+        <div class="row ">
+            <div class="  col-6">
+                <div class="row p-2 mx-1 playerBox">
+                    <div class="col-12">
+                        <p><strong>YOU</strong></p>
+                        <p>Choose your weapon:</p>
+                        <div class="row">
+                            <div class="rockField col-4">
+                                <button type="button" class="rock">rock</button></div>
+                            <div class="paperField col-4">
+                            <button type="button" class="paper">paper</button>
+                        </div>
+                        <div class="scissorsField col-4">
+                            <button type="button" class="scissors">scissors</button>
+                        </div>
+                        </div>
+                        <p class="pt-4">Score: <span class="playerScore"></span></p>
+                    </div>
             </div>
             </div>
-            <div class="col-6 rounded-3 p-2 computerBox">
-                <p>Computer</p>
+            <div class="col-6 p-2 computerBox">
+                <p><strong>COMPUTER</strong></p>
                 <p>Computer Chose: </p>
                 <div class="computerSelection m-2 p-2"></div>
                 <p class="pt-4">Score: <span class="computerScore"></span></p>
@@ -52,6 +57,6 @@
 
         
     </div>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
