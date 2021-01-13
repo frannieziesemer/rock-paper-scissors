@@ -25,6 +25,7 @@ function computerPlay() {
     return item[selection];
 }
 
+
 function playRound(computer, player) {
     if(computer === player) {
         gameStatus.textContent = 'Tie';
@@ -42,12 +43,15 @@ function playRound(computer, player) {
         console.log('error');
     }
     ++totalGames;
-    playerScoreDisplay.textContent = playerScore;
-    computerScoreDisplay.textContent = computerScore;
-    gameCount.textContent = totalGames;
+    displayScore(computerScore, playerScore, totalGames);
     keepScore(computerScore, playerScore, totalGames);
 }
 
+function displayScore(computerScore, playerScore, totalGames) {
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+    gameCount.textContent = totalGames;
+}
 
 function keepScore(computerScore, playerScore, totalGames) {
     if(totalGames === 5) {

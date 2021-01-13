@@ -10,53 +10,55 @@
     <link href="src/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container shadow p-4 mb-5 ">
+    <div class="container-fluid shadow p-4 mb-5 ">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg">
                 <h1>Scissors Paper Rock</h1>
-                <h2>You Vs. Computer!</h2>
                 <br>
-                <h4>Best of five rounds</h4> 
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg">
+                <h4>Best of five rounds</h4> 
+                <h5 >Round <span class="gameCount">1</span>: <span class="gameStatus"></span></h5>
+                
+            </div>
+            <div class="col-lg">
+                <h5 >Overall winner: </h5>
+                <h2 class="results"></h2>
+                </div>
+        </div>
         <div class="row ">
-            <div class="  col-6">
-                <div class="row p-2 mx-1 playerBox">
-                    <div class="col-12">
-                        <p><strong>YOU</strong></p>
-                        <p>Choose your weapon:</p>
-                        <div class="row">
-                            <div class="buttonField col-4 ">
-                                <button type="button" class="rock align-middle">rock</button></div>
-                            <div class="buttonField col-4">
-                            <button type="button" class="paper align-middle">paper</button>
-                        </div>
-                        <div class="buttonField col-4">
-                            <button type="button" class="scissors align-middle">scissors</button>
-                        </div>
-                        </div>
-                        <p class="pt-4">Score: <span class="playerScore"></span></p>
+            <div class="col-lg p-2 mx-1 playerBox">
+                <p><strong>YOU</strong></p>
+                <p>Choose your weapon:</p>
+                <div class="row">
+                    <div class="col-lg buttonField ">
+                        <button type="button" class="rock align-middle">rock</button>
                     </div>
+                    <div class="col-lg buttonField ">
+                        <button type="button" class="paper align-middle">paper</button>
+                    </div>
+                     <div class="col-lg buttonField ">
+                        <button type="button" class="scissors align-middle">scissors</button>
+                    </div>
+                </div>
+                <p class="pt-4">Score: <span class="playerScore"></span></p>
             </div>
-            </div>
-            <div class="col-6 p-2 computerBox">
+        
+            <div class="col-lg p-2 computerBox">
                 <p><strong>COMPUTER</strong></p>
                 <p>Computer Chose: </p>
                 <div class="computerSelection m-2 p-2"></div>
                 <p class="pt-4">Score: <span class="computerScore"></span></p>
             </div>
         </div>
-        <div class="row scores">
-            <div class="col-12">
-                <h5 >Round <span class="gameCount">1</span>: <span class="gameStatus"></span> </h5>
-
-                <br>
-            <h5 >Overall winner: <span class="results"></span></h5>
-            </div>
-        </div>
-
         
+        <div class="row scores">
+           
+        </div>
     </div>
+
     <script src="src/script.js"></script>
 </body>
 </html>
