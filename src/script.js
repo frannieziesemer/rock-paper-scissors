@@ -21,7 +21,6 @@ const computerSelection = document.querySelector('.computerSelection');
 function computerPlay() {
     let item = ['rock', 'paper', 'scissors'];
     let selection = Math.floor(Math.random() * item.length);
-    computerSelection.textContent = item[selection];
     return item[selection];
 }
 
@@ -45,6 +44,7 @@ function playRound(computer, player) {
     ++totalGames;
     displayScore(computerScore, playerScore, totalGames);
     keepScore(computerScore, playerScore, totalGames);
+    displayComputerSelection(computer);
 }
 
 function displayScore(computerScore, playerScore, totalGames) {
@@ -53,15 +53,31 @@ function displayScore(computerScore, playerScore, totalGames) {
     gameCount.textContent = totalGames;
 }
 
+function displayComputerSelection(computer) {
+    if (computer === 'rock') {
+        computerSelection.style.backgroundImage = 'url("src/images/rock.png")';   
+        console.log('displayRock');
+    } else if (computer === 'paper') {
+        console.log('display paper');
+        computerSelection.style.backgroundImage = 'url("src/images/paper.png")';   
+    } else {
+        console.log('display scissors');  
+        computerSelection.style.backgroundImage = 'url("src/images/scissors.png")';   
+    }
+}
+
 function keepScore(computerScore, playerScore, totalGames) {
     if(totalGames === 5) {
         resetScores();
         if (computerScore > playerScore) {
             resultsDisplay.textContent = 'Computer Wins';
+            resultsDisplay.style.color = 'red';
         }   else if (computerScore < playerScore) {
             resultsDisplay.textContent = 'You win!';
+            resultsDisplay.style.color = 'magenta';
         }   else if (computerScore === playerScore) {
             resultsDisplay.textContent = 'Tie!';
+            resultsDisplay.style.color = 'green';
         }   
     } else { 
         resultsDisplay.textContent = ' ';

@@ -50,21 +50,14 @@ button:hover {
 
 }
 
-.buttonField {
-
+.buttonField, .computerSelection {
     height: 80px; 
-
 }
-/* @media (max-width: 500px) {
-    .playerBox .buttonField {
-        width: 100%;
-    }
-
-} */
 
 .computerSelection {
-    width: 45%;
-    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .computerBox, .playerBox {
