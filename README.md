@@ -7,9 +7,8 @@ Vanilla JavaScript
 - event listeners 
 - code refactoring
 - bootstrap
+- DOM manipulation inline JS styling
 
   
-To Do 
-- add picture to 'computer chose' section
 
 
